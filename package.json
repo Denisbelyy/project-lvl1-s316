@@ -1,6 +1,10 @@
 {
   "name": "brain-games-denisbelyy",
+<<<<<<< HEAD
   "version": "1.0.4",
+=======
+  "version": "1.0.5",
+>>>>>>> two-step
   "description": "project brain games",
   "keywords": "brain-games, hexlet",
   "bin": {
