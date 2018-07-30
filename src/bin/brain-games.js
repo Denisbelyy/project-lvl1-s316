@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import {hiUserName} from '..';
+import readlineSync from 'readline-sync';
 console.log("Welcome to the Brain Games!");
-hiUserName();
+readlineSync.question('May I have your name?');
+//import {hiUserName} from '..';
+//hiUserName();
