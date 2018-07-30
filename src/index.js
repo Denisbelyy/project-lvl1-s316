@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import readlineSync from 'readline-sync';
 
 const greeting = () => {
@@ -10,4 +8,3 @@ const greeting = () => {
 };
 
 export default greeting;
->>>>>>> two-step
