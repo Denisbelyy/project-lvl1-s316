@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import greating from '..';
+import { greeting } from '..';
 
-greating();
+greeting();

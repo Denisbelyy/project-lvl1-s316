@@ -6,3 +6,5 @@ lint:
 	npm run eslint
 install:
 	npm install
+build:
+	npm run build
