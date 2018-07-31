@@ -1,6 +1,6 @@
 {
   "name": "brain-games-denisbelyy",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "project brain games",
   "keywords": "brain-games, hexlet",
   "bin": {
@@ -14,7 +14,7 @@
     "babel-node": "babel-node",
     "build": "cross-env NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
-    "eslint": "eslint"
+    "eslint": "eslint --env src/**"
   },
   "author": "Denis Belyy",
   "license": "ISC",
