@@ -3,7 +3,7 @@ start:
 publish:
 	npm publish
 lint:
-	npm run eslint
+	npm run eslint .
 install:
 	npm install
 build:
