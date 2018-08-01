@@ -1,9 +1,24 @@
 import readlineSync from 'readline-sync';
 
-export const greeting = () => {
+export const brainGamesDesc = (desc) => {
   console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('\nMay I have your name? ');
-  console.log(`Hello! ${userName} \n`);
+  console.log(`${desc}\n`);
 };
 
-export default greeting;
+export const getUserName = () => {
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello ${userName}\n`);
+  return userName;
+};
+
+export const isCorrect = (CorrectAnswer, userAnswer) => {
+  if (CorrectAnswer === userAnswer) {
+    console.log('Correct!\n');
+    return true;
+  }
+  return false;
+};
+
+export const failed = (correctAnswer, userAnswer, userName) => {
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
+};

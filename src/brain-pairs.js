@@ -16,3 +16,7 @@ export const cons = (a, b) => (message) => {
 
 export const car = pair => pair('car');
 export const cdr = pair => pair('cdr');
+
+export const makeQuestion = (a, b) => cons(a, b);
+export const getFirstNum = pair => car(pair);
+export const getSecondNum = pair => cdr(pair);

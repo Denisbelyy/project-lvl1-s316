@@ -1,13 +1,14 @@
 {
   "name": "brain-games-denisbelyy",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "project brain games",
   "keywords": [
     "brain-games, hexlet"
   ],
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc"
   },
   "files": [
     "dist"
