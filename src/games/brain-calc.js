@@ -19,7 +19,7 @@ const brainCalc = () => {
     const firstNum = getFirstNum(Question);
     const secondNum = getSecondNum(Question);
     const correctAnswer = String(mathOperation(firstNum, secondNum, operators[i]));
-    const question = `question: ${firstNum} ${operators[i]} ${secondNum}`;
+    const question = `${firstNum} ${operators[i]} ${secondNum}`;
     if (!round(question, correctAnswer, userName)) {
       return;
     }
