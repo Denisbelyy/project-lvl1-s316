@@ -3,11 +3,15 @@ import {
   mathOperation,
 } from '../brain-math';
 import { makeQuestion, getFirstNum, getSecondNum } from '../brain-pairs';
-import { brainGamesDesc, round, getUserName } from '../gamePlay';
-
+import {
+  greeting,
+  round,
+  getUserName,
+  endGame,
+} from '../gamePlay';
 
 const brainCalc = () => {
-  brainGamesDesc('What is the result of the expression?');
+  greeting('What is the result of the expression?');
   const userName = getUserName();
   const operators = ['+', '-', '*'];
   for (let i = 0; i < 3; i += 1) {
@@ -20,7 +24,7 @@ const brainCalc = () => {
       return;
     }
   }
-  console.log(`Congratulations, ${userName}!`);
+  endGame(userName);
 };
 
 export default brainCalc;
