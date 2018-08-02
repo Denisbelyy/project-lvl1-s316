@@ -1,5 +1,5 @@
 start:
-	npm run babel-node -- src/bin/brain-games.js
+	npm run babel-node -- src/bin/brain-gcd.js
 publish:
 	npm publish
 lint:
