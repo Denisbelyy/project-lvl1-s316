@@ -2,7 +2,6 @@ import {
   getRandomNumber,
   mathOperation,
 } from '../brain-math';
-import { makeQuestion, getFirstNum, getSecondNum } from '../brain-pairs';
 import {
   greeting,
   round,
@@ -15,9 +14,8 @@ const brainCalc = () => {
   const userName = getUserName();
   const operators = ['+', '-', '*'];
   for (let i = 0; i < 3; i += 1) {
-    const Question = makeQuestion(getRandomNumber(1, 50), getRandomNumber(1, 50));
-    const firstNum = getFirstNum(Question);
-    const secondNum = getSecondNum(Question);
+    const firstNum = getRandomNumber(1, 50);
+    const secondNum = getRandomNumber(1, 50);
     const correctAnswer = String(mathOperation(firstNum, secondNum, operators[i]));
     const question = `${firstNum} ${operators[i]} ${secondNum}`;
     if (!round(question, correctAnswer, userName)) {
