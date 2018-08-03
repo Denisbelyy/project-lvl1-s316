@@ -2,23 +2,21 @@ import getRandomNumber from '../random-number';
 import gamePlay from '../gamePlay';
 import { cons } from '../brain-pairs';
 
-const getSum = (a, b) => a + b;
-
-const getSubstraction = (a, b) => a - b;
-
-const getMulti = (a, b) => a * b;
-
 const mathOperation = (a, b, operator) => {
-  if (operator === '+') {
-    return getSum(a, b);
+  switch (operator) {
+    case '+': {
+      return a + b;
+    }
+    case '-': {
+      return a - b;
+    }
+    case '*': {
+      return a * b;
+    }
+    default: {
+      return console.log('error! undefined operator');
+    }
   }
-  if (operator === '-') {
-    return getSubstraction(a, b);
-  }
-  if (operator === '*') {
-    return getMulti(a, b);
-  }
-  return console.log('error! undefined operator');
 };
 
 const brainCalc = () => {
