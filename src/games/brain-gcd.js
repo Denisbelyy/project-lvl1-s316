@@ -7,8 +7,8 @@ const isDivisor = (num, divisor) => num % divisor === 0;
 
 const searchDivisor = (firstNumber, secondNumber) => {
   const divider = [];
-  const fewer = firstNumber < secondNumber ? firstNumber : secondNumber;
-  for (let i = 0; i < fewer; i += 1) {
+  const fewerNumber = firstNumber < secondNumber ? firstNumber : secondNumber;
+  for (let i = 0; i < fewerNumber; i += 1) {
     if (isDivisor(firstNumber, i) && isDivisor(secondNumber, i)) {
       divider.push(i);
     }
