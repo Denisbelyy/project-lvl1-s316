@@ -1,16 +1,17 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from './brain-pairs';
 
-const gamePlay = (desc, generatorQuestions) => {
+const maxRounds = 3;
+
+const gamePlay = (description, generateGameData) => {
   console.log('Welcome to the Brain Games!');
-  console.log(`${desc}\n`);
+  console.log(`${description}\n`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello ${userName}\n`);
-  const maxForeach = 3;
-  for (let i = 0; i < maxForeach; i += 1) {
-    const newQuestion = generatorQuestions();
-    const question = car(newQuestion);
-    const correctAnswer = cdr(newQuestion);
+  for (let i = 0; i < maxRounds; i += 1) {
+    const gameData = generateGameData();
+    const question = car(gameData);
+    const correctAnswer = cdr(gameData);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (correctAnswer === userAnswer) {
