@@ -31,8 +31,8 @@ const searchDivisor = (a, b) => {
 const brainGcd = () => {
   const description = 'Find the greatest common divisor of given numbers.';
   const generatorQuestions = () => {
-    const firstNum = getRandomNumber(1, 50);
-    const secondNum = getRandomNumber(1, 50);
+    const firstNum = getRandomNumber(2, 50);
+    const secondNum = getRandomNumber(2, 50);
     const correctAnswer = String(searchDivisor(firstNum, secondNum));
     const question = `${firstNum} ${secondNum}`;
     return cons(question, correctAnswer);
