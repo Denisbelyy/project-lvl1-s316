@@ -1,28 +1,38 @@
-import {
-  getRandomNumber,
-  mathOperation,
-} from '../brain-math';
-import {
-  greeting,
-  round,
-  getUserName,
-  endGame,
-} from '../gamePlay';
+import getRandomNumber from '../random-number';
+import gamePlay from '../gamePlay';
+import { cons } from '../brain-pairs';
+
+const getSum = (a, b) => a + b;
+
+const getSubstraction = (a, b) => a - b;
+
+const getMulti = (a, b) => a * b;
+
+const mathOperation = (a, b, operator) => {
+  if (operator === '+') {
+    return getSum(a, b);
+  }
+  if (operator === '-') {
+    return getSubstraction(a, b);
+  }
+  if (operator === '*') {
+    return getMulti(a, b);
+  }
+  return console.log('error! undefined operator');
+};
 
 const brainCalc = () => {
-  greeting('What is the result of the expression?');
-  const userName = getUserName();
   const operators = ['+', '-', '*'];
-  for (let i = 0; i < 3; i += 1) {
+  const description = 'What is the result of the expression?';
+  const generatorQuestions = () => {
     const firstNum = getRandomNumber(1, 50);
     const secondNum = getRandomNumber(1, 50);
-    const correctAnswer = String(mathOperation(firstNum, secondNum, operators[i]));
-    const question = `${firstNum} ${operators[i]} ${secondNum}`;
-    if (!round(question, correctAnswer, userName)) {
-      return;
-    }
-  }
-  endGame(userName);
+    const randOperators = operators[getRandomNumber(0, operators.length - 1)];
+    const correctAnswer = String(mathOperation(firstNum, secondNum, randOperators));
+    const question = `${firstNum} ${randOperators} ${secondNum}`;
+    return cons(question, correctAnswer);
+  };
+  return gamePlay(description, generatorQuestions);
 };
 
 export default brainCalc;

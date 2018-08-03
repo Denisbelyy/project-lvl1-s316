@@ -1,10 +1,6 @@
-import { getRandomNumber } from '../brain-math';
-import {
-  greeting,
-  round,
-  getUserName,
-  endGame,
-} from '../gamePlay';
+import getRandomNumber from '../random-number';
+import gamePlay from '../gamePlay';
+import { cons } from '../brain-pairs';
 
 const isDivisor = (num, divisor) => num % divisor === 0;
 const getUniqueArr = (arr) => {
@@ -33,18 +29,15 @@ const searchDivisor = (a, b) => {
   return uniqueDividers[uniqueDividers.length - 1];
 };
 const brainGcd = () => {
-  greeting('Find the greatest common divisor of given numbers.');
-  const userName = getUserName();
-  for (let i = 0; i < 3; i += 1) {
+  const description = 'Find the greatest common divisor of given numbers.';
+  const generatorQuestions = () => {
     const firstNum = getRandomNumber(1, 50);
     const secondNum = getRandomNumber(1, 50);
     const correctAnswer = String(searchDivisor(firstNum, secondNum));
-    const question = `${firstNum}, ${secondNum}`;
-    if (!round(question, correctAnswer, userName)) {
-      return;
-    }
-  }
-  endGame(userName);
+    const question = `${firstNum} ${secondNum}`;
+    return cons(question, correctAnswer);
+  };
+  return gamePlay(description, generatorQuestions);
 };
 
 export default brainGcd;

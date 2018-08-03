@@ -1,24 +1,24 @@
 import readlineSync from 'readline-sync';
+import { car, cdr } from './brain-pairs';
 
-export const greeting = (desc) => {
+const gamePlay = (desc, generatorQuestions) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${desc}\n`);
-};
-
-export const getUserName = () => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello ${userName}\n`);
-  return userName;
-};
-
-export const round = (question, correctAnswer, userName) => {
-  console.log(`Question: ${question}`);
-  const userAnswer = readlineSync.question('Your answer: ');
-  if (correctAnswer === userAnswer) {
-    console.log('Correct!\n');
-    return true;
+  const maxForeach = 3;
+  for (let i = 0; i < maxForeach; i += 1) {
+    const newQuestion = generatorQuestions();
+    const question = car(newQuestion);
+    const correctAnswer = cdr(newQuestion);
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (correctAnswer === userAnswer) {
+      console.log('Correct!\n');
+    } else {
+      return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
+    }
   }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
-  return false;
+  return console.log(`Congratulations, ${userName}!`);
 };
-export const endGame = userName => console.log(`Congratulations, ${userName}!`);
+export default gamePlay;
