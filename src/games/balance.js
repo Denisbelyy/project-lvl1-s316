@@ -15,23 +15,22 @@ const createArray = (str) => {
 };
 
 const getBalanceNum = (num) => {
-  const iter = (acc, position) => {
-    if (position === acc.length) {
-      return acc.join('');
+  const numToArray = createArray(String(num));
+  let i = 0;
+  while (i <= numToArray.length) {
+    if (+numToArray[i] > +numToArray[i + 1]) {
+      numToArray[i] = decreaceByOne(numToArray[i]);
+      numToArray[i + 1] = increaceByOne(numToArray[i + 1]);
+      i = 0;
+    } else if (+numToArray[i] + 1 < +numToArray[i + 1]) {
+      numToArray[i] = increaceByOne(numToArray[i]);
+      numToArray[i + 1] = decreaceByOne(numToArray[i + 1]);
+      i = 0;
+    } else {
+      i += 1;
     }
-    if (+acc[position] > +acc[position + 1]) {
-      acc[position] = decreaceByOne(acc[position]);
-      acc[position + 1] = increaceByOne(acc[position + 1]);
-      return iter(acc, 0);
-    }
-    if (+acc[position] + 1 < +acc[position + 1]) {
-      acc[position] = increaceByOne(acc[position]);
-      acc[position + 1] = decreaceByOne(acc[position + 1]);
-      return iter(acc, 0);
-    }
-    return iter(acc, position + 1);
-  };
-  return iter(createArray(String(num)), 0);
+  }
+  return numToArray.join('');
 };
 const generateGameData = () => {
   const num = getRandomNumber(100, 9999);

@@ -2,7 +2,7 @@ import gamePlay from '../gamePlay';
 import { cons, getRandomNumber } from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
-export const isDivisor = (num, divisor) => num % divisor === 0;
+const isDivisor = (num, divisor) => num % divisor === 0;
 const stopForeachDivisor = 1;
 const searchDivisor = (firstNumber, secondNumber) => {
   const fewerNumber = firstNumber < secondNumber ? firstNumber : secondNumber;
