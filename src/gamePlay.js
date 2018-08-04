@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { car, cdr } from './brain-pairs';
+import { car, cdr } from './utils';
 
 const maxRounds = 3;
 

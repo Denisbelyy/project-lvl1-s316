@@ -1,6 +1,5 @@
-import getRandomNumber from '../random-number';
 import gamePlay from '../gamePlay';
-import { cons } from '../brain-pairs';
+import { cons, getRandomNumber } from '../utils';
 
 const description = 'Balance the given number.';
 

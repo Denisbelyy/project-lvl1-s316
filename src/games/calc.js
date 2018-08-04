@@ -1,6 +1,5 @@
-import getRandomNumber from '../random-number';
 import gamePlay from '../gamePlay';
-import { cons } from '../brain-pairs';
+import { cons, getRandomNumber } from '../utils';
 
 const mathOperation = (a, b, operator) => {
   switch (operator) {
@@ -20,7 +19,7 @@ const mathOperation = (a, b, operator) => {
 };
 const description = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
-const generatorQuestions = () => {
+const generateGameData = () => {
   const firstNum = getRandomNumber(1, 50);
   const secondNum = getRandomNumber(1, 50);
   const randomOperators = operators[getRandomNumber(0, operators.length - 1)];
@@ -29,6 +28,6 @@ const generatorQuestions = () => {
   return cons(question, correctAnswer);
 };
 
-const brainCalc = () => gamePlay(description, generatorQuestions);
+const brainCalc = () => gamePlay(description, generateGameData);
 
 export default brainCalc;
