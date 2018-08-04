@@ -24,5 +24,3 @@ const generateGameData = () => {
 const brainProgression = () => gamePlay(description, generateGameData);
 
 export default brainProgression;
-
-// 5 7 9 11 13 .. 17 19 21 23
