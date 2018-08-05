@@ -42,7 +42,8 @@ Enter the name of the game in the console
   [![asciicast](https://asciinema.org/a/cPdM26Ji0BWQ3AEgAYDitwPVf.png)](https://asciinema.org/a/cPdM26Ji0BWQ3AEgAYDitwPVf)
 
 ### brain-prime
-  <script src="https://asciinema.org/a/mIpO848BrxGjTO5kfVb1N3Ah4.js" id="asciicast-mIpO848BrxGjTO5kfVb1N3Ah4" async></script>
-  
+  [![asciicast](https://asciinema.org/a/mIpO848BrxGjTO5kfVb1N3Ah4.png)](https://asciinema.org/a/mIpO848BrxGjTO5kfVb1N3Ah4)
+
+
 <a href="https://codeclimate.com/github/Denisbelyy/project-lvl1-s316/maintainability"><img src="https://api.codeclimate.com/v1/badges/d459e65e83af328fe4fd/maintainability" /></a>
 [![Build Status](https://travis-ci.org/Denisbelyy/project-lvl1-s316.svg?branch=master)](https://travis-ci.org/Denisbelyy/project-lvl1-s316)
