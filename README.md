@@ -28,7 +28,6 @@ Enter the name of the game in the console
 
 ### brain-even
 [![asciicast](https://asciinema.org/a/EKAp61UatrOT1R8LhCjOs8E8g.png)](https://asciinema.org/a/EKAp61UatrOT1R8LhCjOs8E8g)
-  <a href="https://codeclimate.com/github/Denisbelyy/project-lvl1-s316/maintainability"><img src="https://api.codeclimate.com/v1/badges/d459e65e83af328fe4fd/maintainability" /></a>
   
 ### brain-calc
   [![asciicast](https://asciinema.org/a/TLyHxc3yBb9VEMDs28bvMux8Q.png)](https://asciinema.org/a/TLyHxc3yBb9VEMDs28bvMux8Q)
@@ -45,4 +44,5 @@ Enter the name of the game in the console
 ### brain-prime
   [![asciicast](https://asciinema.org/a/mIpO848BrxGjTO5kfVb1N3Ah4.png)](https://asciinema.org/a/mIpO848BrxGjTO5kfVb1N3Ah4)
   
+<a href="https://codeclimate.com/github/Denisbelyy/project-lvl1-s316/maintainability"><img src="https://api.codeclimate.com/v1/badges/d459e65e83af328fe4fd/maintainability" /></a>
 [![Build Status](https://travis-ci.org/Denisbelyy/project-lvl1-s316.svg?branch=master)](https://travis-ci.org/Denisbelyy/project-lvl1-s316)
