@@ -2,10 +2,9 @@ import gamePlay from '../gamePlay';
 import { cons, getRandomNumber } from '../utils';
 
 const description = 'Is this number prime?';
-const notPrimeNumbers = 2;
 
 const isPrime = (number) => {
-  if (number < notPrimeNumbers) {
+  if (number < 2) {
     return false;
   }
   const iter = (currentNumber) => {
