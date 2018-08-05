@@ -1,31 +1,23 @@
 import gamePlay from '../gamePlay';
-import {
-  cons,
-  car,
-  cdr,
-  getRandomNumber,
-} from '../utils';
+import { cons, getRandomNumber } from '../utils';
 
 const description = 'What number is missing in this progression?';
-const lengthOfProgression = 10;
-const generateProgression = (startElement, step) => {
+const generateProgression = (startElement, step, length, index) => {
   const progression = [];
-  for (let i = 0; i < lengthOfProgression; i += 1) {
+  for (let i = 0; i < length; i += 1) {
     progression.push(startElement + step * i);
   }
-  const indexOfNumber = getRandomNumber(0, progression.length - 1);
-  const currentAnswer = progression[indexOfNumber];
-  progression[indexOfNumber] = '..';
+  const currentAnswer = String(progression[index]);
+  progression[index] = '..';
   return cons(progression.join(' '), currentAnswer);
 };
 
 const generateGameData = () => {
   const startElement = getRandomNumber(1, 50);
   const step = getRandomNumber(1, 50);
-  const progressionData = generateProgression(startElement, step);
-  const question = car(progressionData);
-  const correctAnswer = cdr(progressionData);
-  return cons(question, String(correctAnswer));
+  const lengthOfProgression = 10;
+  const indexOfNumber = getRandomNumber(0, lengthOfProgression - 1);
+  return generateProgression(startElement, step, lengthOfProgression, indexOfNumber);
 };
 const brainProgression = () => gamePlay(description, generateGameData);
 
