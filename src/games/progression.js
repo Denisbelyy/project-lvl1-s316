@@ -3,9 +3,9 @@ import { cons, getRandomNumber } from '../utils';
 
 const description = 'What number is missing in this progression?';
 const generateProgression = (startElement, step, length, index) => {
-  const progression = [];
+  let progression = [];
   for (let i = 0; i < length; i += 1) {
-    progression.push(startElement + step * i);
+    progression = [...progression, startElement + step * i];
   }
   const currentAnswer = String(progression[index]);
   progression[index] = '..';
